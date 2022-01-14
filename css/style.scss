@@ -1,7 +1,11 @@
 $font-stack: helvetica;
+$primary-color: rgb(212, 186, 138);
 
-.img {
-    background-size: cover;
-    opacity: 85%;
-    box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
+
+main  {
+    color: $primary-color;
+}
+
+#nav {
+    color: $primary-color;
 }
