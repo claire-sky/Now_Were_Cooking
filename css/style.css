@@ -1,9 +1,9 @@
-main {
-  color: #d4ba8a;
+#nav-text {
+  color: #fc7b11;
 }
 
-#nav {
-  color: #d4ba8a;
+#spice-img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */

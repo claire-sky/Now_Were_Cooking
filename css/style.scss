@@ -1,11 +1,15 @@
 $font-stack: helvetica;
-$primary-color: rgb(212, 186, 138);
+$loud-text-color: rgb(252, 123, 17);
+$text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+$box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 
-main  {
-    color: $primary-color;
+
+
+#nav-text {
+    color: $loud-text-color;
 }
 
-#nav {
-    color: $primary-color;
+#spice-img {
+    box-shadow: $box-shadow;
 }
