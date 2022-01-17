@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { User, Recipe } = require("../../models");
+
 // GET /api/users
 router.get("/", (req, res) => {
   // access our User model and run .findAll() method
@@ -20,7 +21,7 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-    include: [],
+    // include: [],
   })
     .then((dbUserData) => {
       if (!dbUserData) {
