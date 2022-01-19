@@ -1,0 +1,15 @@
+$font-stack: helvetica;
+$loud-text-color: rgb(252, 123, 17);
+$text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+$box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+
+
+
+#nav-text {
+    color: $loud-text-color;
+}
+
+#spice-img {
+    box-shadow: $box-shadow;
+}
