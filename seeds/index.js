@@ -14,12 +14,6 @@ const seedAll = async () => {
   await seedRecipes();
   console.log('--------------');
 
-  await seedIngredients();
-  console.log('--------------');
-
-  await seedFavorites();
-  console.log('--------------');
-
   process.exit(0);
 };
 
