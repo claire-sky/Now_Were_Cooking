@@ -21,7 +21,7 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-    include: [],
+    // include: [],
   })
     .then((dbUserData) => {
       if (!dbUserData) {
