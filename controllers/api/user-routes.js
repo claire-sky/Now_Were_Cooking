@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Recipe } = require("../../models");
+const { User, Recipes } = require("../../models");
 
 // GET /api/users
 router.get("/", (req, res) => {
@@ -36,7 +36,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
-// POST /api/users
+// create user
 router.post("/", (req, res) => {
   User.create({
     username: req.body.username,

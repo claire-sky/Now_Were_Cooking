@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const { Recipe } = require("../../models");
+const { Recipes } = require("../../models");
 
-// GET /api/users
+// GET /api/recipe
 router.get("/", (req, res) => {
-  // access our User model and run .findAll() method
-  Recipe.findAll({})
+  // access our recipe model and run .findAll() method
+  Recipes.findAll({})
     .then((dbRecipeData) => res.json(dbRecipeData))
     .catch((err) => {
       console.log(err);
@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
 
 // GET /api/users/1
 router.get("/:id", (req, res) => {
-  Recipe.findOne({
+  Recipes.findOne({
     where: {
       id: req.params.id,
     },
@@ -34,7 +34,7 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  Recipe.create({})
+  Recipes.create({})
     .then((dbRecipeData) => res.json(dbRecipeData))
     .catch((err) => {
       console.log(err);
@@ -43,7 +43,7 @@ router.post("/", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-  Recipe.destroy({
+  Recipes.destroy({
     where: {
       id: req.params.id,
     },
