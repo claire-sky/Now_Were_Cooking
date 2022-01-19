@@ -1,10 +1,19 @@
 // import all models
-const Recipes = require('./Recipes');
-const User = require('./User');
+const Tag = require("./Tag");
+const Recipes = require("./Recipes");
+const User = require("./User");
 
 // create associations
 User.hasMany(Recipes, {
-  foreignKey: 'user_id'
+  foreignKey: "user_id",
 });
 
-module.exports = { User, Recipes, };
+Tag.belongsTo(Recipes, {
+  foreignKey: "tag_id",
+});
+
+Recipes.hasMany(Tag, {
+  foreignKey: "tag_id",
+});
+
+module.exports = { User, Recipes, Tag };
