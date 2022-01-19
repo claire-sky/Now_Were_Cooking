@@ -4,10 +4,10 @@ const { User, Recipes, Tag } = require("../models");
 
 // login route
 router.get('/login', (req, res) => {
-    // if (req.session.loggedIn) {
-    //   res.redirect('/search');
-    //   return;
-    // }
+    if (req.session.loggedIn) {
+      res.redirect('/search');
+      return;
+    }
   
     res.render('login');
   });
