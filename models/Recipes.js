@@ -17,13 +17,20 @@ Recipes.init(
         allowNull: false
       },
       content: {
-        type: DataTypes.TEXT,
+        type: DataTypes.STRING,
         allowNull: false
       },
       user_id: {
         type: DataTypes.INTEGER,
         references: {
           model: 'user',
+          key: 'id'
+        }
+      },
+      tag_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'tag',
           key: 'id'
         }
       }
