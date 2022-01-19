@@ -1,10 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// create our Post model
+
 class Recipes extends Model {}
 
-// create fields/columns for Post model
 Recipes.init(
     {
       id: {
@@ -33,7 +32,7 @@ Recipes.init(
       sequelize,
       freezeTableName: true,
       underscored: true,
-      modelName: 'post'
+      modelName: 'recipes'
     }
   );
   
