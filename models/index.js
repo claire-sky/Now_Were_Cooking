@@ -8,11 +8,11 @@ User.hasMany(Recipes, {
   foreignKey: "user_id",
 });
 
-Tag.belongsTo(Recipes, {
+Recipes.belongsTo(Tag, {
   foreignKey: "tag_id",
 });
 
-Recipes.hasMany(Tag, {
+Tag.hasMany(Recipes, {
   foreignKey: "tag_id",
 });
 
