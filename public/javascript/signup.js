@@ -24,12 +24,10 @@ async function signupFormHandler(event) {
   }
 }
 
-function signupRedirect() {
-  document.location.replace("/signup");
-}
-
 document
   .querySelector(".signup-form")
   .addEventListener("submit", signupFormHandler);
 
-document.querySelector("#signup").addEventListener("click", signupRedirect);
+document.querySelector("#signup").onclick = function () {
+  document.location.replace("/signup");
+};

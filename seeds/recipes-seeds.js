@@ -29,13 +29,13 @@ const recipeData = [
     title: "Vegetarian Stuffed Bell Peppers",
     content: "https://www.pinterest.com/pin/422281204747057/",
     tag_id: 2,
-    user_id: 5,
+    user_id: 2,
   },
   {
     title: "Vegetarian Crunchwrap Supreme",
     content: "https://www.pinterest.com/pin/5348093298153548/",
     tag_id: 2,
-    user_id: 6,
+    user_id: 3,
   },
   {
     title: "Papa Burger",

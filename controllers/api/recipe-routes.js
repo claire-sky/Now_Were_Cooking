@@ -4,7 +4,7 @@ const { Recipes } = require("../../models");
 // GET /api/recipe
 router.get("/", (req, res) => {
   // access our recipe model and run .findAll() method
-  Recipes.findAll({})
+  Recipes.findAll()
     .then((dbRecipeData) => res.json(dbRecipeData))
     .catch((err) => {
       console.log(err);
