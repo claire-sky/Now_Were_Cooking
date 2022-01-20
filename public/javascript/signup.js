@@ -17,13 +17,19 @@ async function signupFormHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/search");
     } else {
       alert(response.statusText);
     }
   }
 }
 
+function signupRedirect() {
+  document.location.replace("/signup");
+}
+
 document
   .querySelector(".signup-form")
   .addEventListener("submit", signupFormHandler);
+
+document.querySelector("#signup").addEventListener("click", signupRedirect);

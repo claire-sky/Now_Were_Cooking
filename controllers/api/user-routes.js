@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const { User, Recipes } = require("../../models");
 
-// GET /api/users
+// get all users
 router.get("/", (req, res) => {
   // access our User model and run .findAll() method
   User.findAll({
@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
     });
 });
 
-// GET /api/users/1
+// get one user
 router.get("/:id", (req, res) => {
   User.findOne({
     attributes: { exclude: ["password"] },
@@ -58,7 +58,7 @@ router.post("/", (req, res) => {
     });
 });
 
-// PUT /api/users/1
+// update user
 router.put("/:id", (req, res) => {
   User.update(req.body, {
     individualHooks: true,
@@ -79,7 +79,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
-// DELETE /api/users/1
+// delete user
 router.delete("/:id", (req, res) => {
   User.destroy({
     where: {
@@ -99,7 +99,7 @@ router.delete("/:id", (req, res) => {
     });
 });
 
-// POST /api/users/login
+// login user
 router.post("/login", (req, res) => {
   User.findOne({
     where: {
@@ -119,6 +119,18 @@ router.post("/login", (req, res) => {
 
     res.json({ user: dbUserData, message: "You are now logged in!" });
   });
+});
+
+// logout user
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  }
+  else {
+    res.status(404).end();
+  }
 });
 
 module.exports = router;
