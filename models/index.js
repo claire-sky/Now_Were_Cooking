@@ -4,6 +4,10 @@ const Recipes = require("./Recipes");
 const User = require("./User");
 
 // create associations
+Recipes.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
 User.hasMany(Recipes, {
   foreignKey: "user_id",
 });

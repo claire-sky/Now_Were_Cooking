@@ -126,6 +126,13 @@
             Search
           </button>
         </div>
+          <ol class="recipe-list">
+          {{#each recipes as |recipes|}}
+          <li>
+            {{> recipe-info }}
+          </li>
+          {{/each}}
+        </ol>
       </div>
     </div>
   </div>

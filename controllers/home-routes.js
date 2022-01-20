@@ -5,9 +5,6 @@ const { User, Recipes, Tag } = require("../models");
 // homepage
 router.get('/', (req, res) => { res.render('homepage') });
 
-// search page
-router.get('/search', (req, res) => { res.render('search') });
-
 // login route
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
@@ -20,5 +17,28 @@ router.get('/login', (req, res) => {
 
 // signup route
 router.get('/signup', (req, res) => { res.render('signup') });
+
+// get all recipes for search page
+router.get('/search', (req, res) => {
+  Recipes.findAll({
+    attributes: [
+      'id',
+      'title',
+      'content',
+    ]
+  })
+    .then(dbRecipeData => {
+      const recipes = dbRecipeData.map(recipe => recipe.get({ plain: true }));
+
+      res.render('search', {
+        recipes,
+        loggedIn: req.session.loggedIn
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 module.exports = router;
