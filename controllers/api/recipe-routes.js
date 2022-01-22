@@ -1,10 +1,17 @@
 const router = require("express").Router();
-const { Recipe } = require("../../models");
+const { Recipes } = require("../../models");
+var bodyParser = require('body-parser')
+var jsonParser = bodyParser.json()
+var htmlParser = bodyParser.text()
+
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded());
+router.use(bodyParser.text());
 
 // GET /api/users
 router.get("/", (req, res) => {
   // access our User model and run .findAll() method
-  Recipe.findAll({})
+  Recipes.findAll()
     .then((dbRecipeData) => res.json(dbRecipeData))
     .catch((err) => {
       console.log(err);
@@ -14,7 +21,7 @@ router.get("/", (req, res) => {
 
 // GET /api/users/1
 router.get("/:id", (req, res) => {
-  Recipe.findOne({
+  Recipes.findOne({
     where: {
       id: req.params.id,
     },
@@ -33,8 +40,22 @@ router.get("/:id", (req, res) => {
     });
 });
 
+// router.post("/", function (req, res) {
+//   var username = req.body.username;
+//     res.send('<h1>Hello</h1> '+username);
+// });
+
+router.post("/myaction", function(request, response) {
+  console.log("Gender is:", request.body.gender);
+  response.sendStatus(200)
+});
+
 router.post("/", (req, res) => {
-  Recipe.create({})
+  Recipes.create({
+    title: req.body.title,
+    content: req.body.content,
+    user_id: req.body.user_id
+  })
     .then((dbRecipeData) => res.json(dbRecipeData))
     .catch((err) => {
       console.log(err);
@@ -42,8 +63,9 @@ router.post("/", (req, res) => {
     });
 });
 
+
 router.delete("/:id", (req, res) => {
-  Recipe.destroy({
+  Recipes.destroy({
     where: {
       id: req.params.id,
     },
