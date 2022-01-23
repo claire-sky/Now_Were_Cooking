@@ -1,8 +1,9 @@
 $font-stack: helvetica;
 $loud-text-color: rgb(252, 123, 17);
-$text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+$text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 $box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
+$secondary-text-color: rgb(233, 154, 64);
+$text-padding-top: 50px;
 
 
 
@@ -10,6 +11,16 @@ $box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     color: $loud-text-color;
 }
 
+#secondary-text {
+    color: $loud-text-color;
+    
+}
+
 #spice-img {
     box-shadow: $box-shadow;
+}
+
+#form-pg-text {
+    padding-top: $text-padding-top;
+    
 }

@@ -1,14 +1,25 @@
-<form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
+<div class="container" id="form-pg-text">
+
+  <h1 class="display-5 fw-bold lh-1 mb-3" id="secondary-text">Welcome back, chef!</h1>
+   <p class="lead">Login below to get cookin'!</p>
+
+</div>
+<div class="container">
+  <div class="col-3">
+
+    <form class="login-form justify-content-center">
+      <div class="input-group mb-3 ">
+        <span class="input-group-text" id="inputGroup-sizing-default">Email:</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="email-login">
+      </div>
+      <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">Password:</span>
+      <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="password-login">
+    </div>
+      <div>
+        <button type="submit" class="btn btn-primary" id="login-btn">Login</button>
+      </div>
+    </form>
   </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit">login</button>
-  </div>
-</form>
+</div>
 <script src="/javascript/login.js"></script>

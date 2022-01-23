@@ -1,4 +1,8 @@
-#prime-text {
+#nav-text {
+  color: #fc7b11;
+}
+
+#secondary-text {
   color: #fc7b11;
 }
 
@@ -6,12 +10,8 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.btn-no-style {
-  background: none;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 100%;
+#form-pg-text {
+  padding-top: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */
