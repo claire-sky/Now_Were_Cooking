@@ -35,7 +35,11 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", withAuth, (req, res) => {
-  Recipes.create({})
+  Recipes.create({
+    title: req.body.title,
+    content: req.body.content,
+    user_id: req.session.user_id
+  })
     .then((dbRecipeData) => res.json(dbRecipeData))
     .catch((err) => {
       console.log(err);
