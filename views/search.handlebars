@@ -2,6 +2,9 @@
   <div class="container">
       <div class="row justify-content-center">
         <div class="col-auto justify-content-center">
+          <h1 id="secondary-text">Need some inspiration? Search our recipes below:</h1>
+
+          {{!-- search by protein type (tag) for future
           <h1 id="secondary-text">Choose your protein:</h1>
           <div class="dropdown justify-content-center">
               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -13,7 +16,7 @@
                 <li><a class="dropdown-item" id="vegetarian" href="#">Vegetarian</a></li>
               </ul>
             </div>
-          </div>
+          </div> --}}
             <div class="container justify-content-center" id="recipe-list">
             <ol class="recipe-list">
             {{#each recipes as |recipes|}}
