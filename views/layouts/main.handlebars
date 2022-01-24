@@ -53,18 +53,18 @@
                       href="/"
                     >Home</a>
                   </li>
-                  {{!-- {{#if loggedIn}} --}}
+                  {{#if loggedIn}}
                     <li class="nav-item">
-                      <a class="nav-link" href="/homepage" id="logout">Logout</a>
+                      <a class="nav-link" href="/" id="logout">Logout</a>
                     </li>
-                  {{!-- {{else}} --}}
+                  {{else}}
                     <li class="nav-item">
                       <a class="nav-link" href="/login">Login</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="/signup">Signup</a>
                     </li>
-                  {{!-- {{/if}} --}}
+                  {{/if}}
                 </ul>
               </div>
             </div>
@@ -77,9 +77,9 @@
       <footer>
       </footer>
     </div>
-  {{!-- {{#if loggedIn}} --}}
+  {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
-  {{!-- {{/if}} --}}
+  {{/if}}
   </body>
 
 </html>
