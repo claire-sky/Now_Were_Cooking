@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const { Recipes } = require("../../models");
+const withAuth = require('../../utils/auth');
 
 // GET /api/recipe
 router.get("/", (req, res) => {
@@ -33,7 +34,7 @@ router.get("/:id", (req, res) => {
     });
 });
 
-router.post("/", (req, res) => {
+router.post("/", withAuth, (req, res) => {
   Recipes.create({})
     .then((dbRecipeData) => res.json(dbRecipeData))
     .catch((err) => {
@@ -42,7 +43,7 @@ router.post("/", (req, res) => {
     });
 });
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", withAuth, (req, res) => {
   Recipes.destroy({
     where: {
       id: req.params.id,
