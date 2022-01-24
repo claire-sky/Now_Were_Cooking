@@ -106,34 +106,23 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-4 justify-content-center">
-        <h1 id="prime-text">Add a recipe:</h1>
-        <div class="input-group mb-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder=""
-            aria-label="Recipient's username"
-            aria-describedby="button-addon2"
-          />
-          <button
-            class="btn btn-outline-secondary"
-            type="button"
-            id="button-addon2"
-          >
-            Search
-          </button>
-        </div>
-          <ol class="my-recipes">
-          {{#each recipes as |recipes|}}
-          <li>
-            {{> recipe-info }}
-          </li>
-          {{/each}}
-        </ol>
-      </div>
-    </div>
+  <form class="add-recipe-form">
+  <div>
+    <label for="recipe-name">recipe name:</label>
+    <input type="text" id="recipe-name" />
   </div>
+  <div>
+    <label for="url">url:</label>
+    <input type="text" id="url" />
+  </div>
+  <div>
+    <label for="tag">main ingredient:</label>
+    <input type="password" id="tag" />
+  </div>
+  <div>
+    <button type="submit">save recipe</button>
+  </div>
+</form>
+
+<script src="/javascript/signup.js"></script>
 </main>
