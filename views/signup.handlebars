@@ -1,19 +1,31 @@
-<form class="signup-form">
-  <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
+<div class="container" id="form-pg-text">
+
+  <h1 class="display-5 fw-bold lh-1 mb-3" id="secondary-text">Let's get started!</h1>
+   <p class="lead">Fill out the forms below to sign-up!<p>
+
+</div>
+
+<div class="container">
+  <div class="col-3">
+
+    <form class="login-form justify-content-center">
+      <div class="input-group mb-3 ">
+        <span class="input-group-text" id="inputGroup-sizing-default">Username:</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="username-signup">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Email:</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="email-signup">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="inputGroup-sizing-default">Password:</span>
+        <input type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="password-signup">
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary" id="login-btn">Sign-up!</button>
+      </div>
+    </form>
   </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">signup</button>
-  </div>
-</form>
+</div>
 
 <script src="/javascript/signup.js"></script>
