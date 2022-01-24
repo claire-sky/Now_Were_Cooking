@@ -1,12 +1,17 @@
+
 # Now_Were_Cooking
 
-![website link](:pray:)
+![website link](https://fathomless-earth-96785.herokuapp.com/)
 ![github repository](https://github.com/claire-sky/Now_Were_Cooking)
 
 ## User Story
+Hello welcome to Now We're cooking. A place for people who are interested in food can come together and show their recipies and have them put in categories based on the protien groups you are looking for.
 As an adventurous eater
 I want to search for new food recipes
 So I can make delicious food
+
+## Usage
+You can use the website to create and share recipies with other individuals online.
 
 ## Technologies Used
 * HTML
@@ -33,4 +38,4 @@ So I can make delicious food
 ## Assets
 The following image demonstrates the web application's appearance and functionality:
 ![* Homepage.](/images/homepage-screenshot.jpg)
-![* Search-page.](/images/homepage-screenshot.jpg) 
+![* Search-page.](/images/homepage-screenshot.jpg)
